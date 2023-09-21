@@ -57,3 +57,7 @@ to run:
 ```bash
 $ clang main.ll; ./a.out
 ```
+
+## Related project
+
+- [Geo3x3](https://github.com/taisukef/Geo3x3) supports over 100 languages
