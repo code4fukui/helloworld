@@ -60,16 +60,14 @@ $ clang main.ll; ./a.out
 
 ### in C
 
-[main.bas](main.bas) in [IchigoJam BASIC](https://ichigojam.net/)
-```
-10 ?"hello, world"
-```
+[IchigoJam BASIC](https://ichigojam.net/)
 
 setup:  
 - open [IchigoJam web](https://fukuno.jig.jp/app/IchigoJam)
 
 to run:
-```bash
+```
+10 ?"hello, world"
 RUN
 ```
 
