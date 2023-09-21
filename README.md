@@ -37,7 +37,7 @@ $ clang main.c; ./a.out
 
 ### in LLVM-IR
 
-[main.c](main.c)
+[main.ll](main.ll)
 ```
 declare dso_local i32 @printf(ptr, ...)
 
