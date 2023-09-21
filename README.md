@@ -1,0 +1,60 @@
+# hello, world
+
+!["Hello, World!" program by Brian Kernighan (1978)](Hello_World_Brian_Kernighan_1978.jpg)
+
+Let's start new programming language with ["hello, world"](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program)!
+
+## Supported Languages
+
+2 language supported  
+
+([C](#in-C) / [LLVM IR](#in-LLVM-IR))
+
+## How to run
+
+### in C
+
+
+[main.c](main.c)
+```c
+#include <stdio.h>
+
+int main() {
+  printf("hello, world\n");
+  return 0;
+}
+```
+
+setup:
+```bash
+$ brew install llvm
+```
+
+to run:
+```bash
+$ clang main.c; ./a.out
+```
+
+### in LLVM-IR
+
+[main.c](main.c)
+```
+declare dso_local i32 @printf(ptr, ...)
+
+@.str.mes = private unnamed_addr constant [14 x i8] c"hello, world\0a\00"
+
+define dso_local i32 @main(i32 %argc, i8** %argv) {
+  call i32 (ptr, ...) @printf(ptr @.str.mes)
+  ret i32 0
+}
+```
+
+setup:
+```bash
+$ brew install llvm
+```
+
+to run:
+```bash
+$ clang main.ll; ./a.out
+```
