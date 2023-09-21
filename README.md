@@ -6,7 +6,7 @@ Let's start new programming language with ["hello, world"](https://en.wikipedia.
 
 ## Supported Languages
 
-2 language supported  
+3 language supported  
 
 ([C](#in-C) / [LLVM IR](#in-LLVM-IR) / [IchigoJam BASIC](#in-IchigoJam-BASIC))
 
@@ -58,7 +58,7 @@ to run:
 $ clang main.ll; ./a.out
 ```
 
-### in C
+### in IchigoJam BASIC
 
 [IchigoJam BASIC](https://ichigojam.net/)
 
