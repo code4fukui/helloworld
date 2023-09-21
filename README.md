@@ -8,7 +8,7 @@ Let's start new programming language with ["hello, world"](https://en.wikipedia.
 
 2 language supported  
 
-([C](#in-C) / [LLVM IR](#in-LLVM-IR))
+([C](#in-C) / [LLVM IR](#in-LLVM-IR) / [IchigoJam BASIC](#in-IchigoJam-BASIC))
 
 ## How to run
 
@@ -60,6 +60,19 @@ $ brew install llvm
 to run:
 ```bash
 $ clang main.ll; ./a.out
+```
+
+### in C
+
+[IchigoJam BASIC](https://ichigojam.net/)
+
+setup:  
+- open [IchigoJam web](https://fukuno.jig.jp/app/IchigoJam)
+
+to run:
+```
+10 ?"hello, world"
+RUN
 ```
 
 ## Related project
