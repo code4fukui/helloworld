@@ -66,12 +66,15 @@ $ clang main.ll; ./a.out
 
 [IchigoJam BASIC](https://ichigojam.net/)
 
+```
+10 ?"hello, world"
+```
+
 setup:  
 - open [IchigoJam web](https://fukuno.jig.jp/app/IchigoJam)
 
 to run:
 ```
-10 ?"hello, world"
 RUN
 ```
 
