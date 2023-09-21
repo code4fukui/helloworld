@@ -14,7 +14,7 @@ Let's start new programming language with ["hello, world"](https://en.wikipedia.
 
 ### in C
 
-[main.c](main.c) in [C](https://en.wikipedia.org/wiki/C_(programming_language))
+main.c in [C](https://en.wikipedia.org/wiki/C_(programming_language))
 ```c
 #include <stdio.h>
 
@@ -36,7 +36,7 @@ $ clang main.c; ./a.out
 
 ### in LLVM-IR
 
-[main.ll](main.ll) in [LLVM IR](https://llvm.org/docs/LangRef.html)
+main.ll in [LLVM IR](https://llvm.org/docs/LangRef.html)
 ```
 declare dso_local i32 @printf(ptr, ...)
 
