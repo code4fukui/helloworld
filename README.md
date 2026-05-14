@@ -1,83 +1,67 @@
-# hello, world
+# helloworld
 
-!["Hello, World!" program by Brian Kernighan (1978)](Hello_World_Brian_Kernighan_1978.jpg)
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
 
-Let's start new programming language with ["hello, world"](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program)!
+A collection of "Hello, World!" programs implemented in C, LLVM IR, and IchigoJam BASIC.
 
-## Supported Languages
+## Features
 
-3 language supported  
+- **Multiple Languages**: C, LLVM IR, and IchigoJam BASIC.
+- **Complete Examples**: Includes sample code with build and run instructions for each.
 
-([C](#in-C) / [LLVM IR](#in-LLVM-IR) / [IchigoJam BASIC](#in-IchigoJam-BASIC))
+## Requirements
 
-## How to run
+- **C / LLVM IR**: `clang` (e.g., `brew install llvm` on macOS).
+- **IchigoJam BASIC**: [IchigoJam web](https://fukuno.jig.jp/app/IchigoJam) online emulator.
 
-### in C
+## Usage
 
-[C](https://en.wikipedia.org/wiki/C_(programming_language))
+### C
 
-main.c
-```c
-#include <stdio.h>
+1.  Create a file `main.c` with the following content:
+    ```c
+    #include <stdio.h>
 
-int main() {
-  printf("hello, world\n");
-  return 0;
-}
-```
+    int main() {
+      printf("hello, world\n");
+      return 0;
+    }
+    ```
+2.  Compile and run:
+    ```bash
+    clang main.c && ./a.out
+    ```
 
-setup:
-```bash
-$ brew install llvm
-```
+### LLVM IR
 
-to run:
-```bash
-$ clang main.c; ./a.out
-```
+1.  Create a file `main.ll` with the following content:
+    ```llvm
+    declare dso_local i32 @printf(ptr, ...)
 
-### in LLVM-IR
+    @.str.mes = private unnamed_addr constant [14 x i8] c"hello, world\0a\00"
 
-[LLVM IR](https://llvm.org/docs/LangRef.html)
+    define dso_local i32 @main(i32 %argc, i8** %argv) {
+      call i32 (ptr, ...) @printf(ptr @.str.mes)
+      ret i32 0
+    }
+    ```
+2.  Compile and run:
+    ```bash
+    clang main.ll && ./a.out
+    ```
 
-main.ll
-```
-declare dso_local i32 @printf(ptr, ...)
+### IchigoJam BASIC
 
-@.str.mes = private unnamed_addr constant [14 x i8] c"hello, world\0a\00"
+1.  Open the [IchigoJam web](https://fukuno.jig.jp/app/IchigoJam) emulator.
+2.  Enter the code:
+    ```basic
+    10 ?"hello, world"
+    ```
+3.  Run the program with the `RUN` command:
+    ```
+    RUN
+    ```
 
-define dso_local i32 @main(i32 %argc, i8** %argv) {
-  call i32 (ptr, ...) @printf(ptr @.str.mes)
-  ret i32 0
-}
-```
+## License
 
-setup:
-```bash
-$ brew install llvm
-```
-
-to run:
-```bash
-$ clang main.ll; ./a.out
-```
-
-### in IchigoJam BASIC
-
-[IchigoJam BASIC](https://ichigojam.net/)
-
-```
-10 ?"hello, world"
-```
-
-setup:  
-- open [IchigoJam web](https://fukuno.jig.jp/app/IchigoJam)
-
-to run:
-```
-RUN
-```
-
-## Related project
-
-- [Geo3x3](https://github.com/taisukef/Geo3x3) supports over 100 languages
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
